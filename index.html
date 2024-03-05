@@ -17,8 +17,8 @@
     </style>
   </head>
   <body class="bg-white text-black">
-    <header class="bg-white pt-[19px] md:mb-[90px] md:pt-7" id="header">
-      <div class="mx-auto flex max-w-[1110px] items-start border-b border-grayLight pb-[22px] max-[1158px]:px-6 md:items-center md:pb-[34px]">
+    <header class="bg-white pt-2 md:mb-[90px] md:pt-7" id="header">
+      <div class="mx-auto flex max-w-[1110px] items-center border-b border-grayLight pb-[11px] max-[1158px]:px-6 max-md:pl-2 max-md:pr-2.5 md:pb-[34px]">
         <nav class="md:mr-auto">
           <ul
             class="flex max-md:absolute max-md:left-0 max-md:top-0 max-md:z-10 max-md:h-full max-md:w-[250px] max-md:-translate-x-full max-md:flex-col max-md:gap-y-5 max-md:bg-white max-md:p-6 max-md:pt-[90px] max-md:text-lg/[26px] max-md:font-bold max-md:duration-200 max-md:ease-out md:gap-x-[33px] md:text-[15px]/[26px] md:text-grayDark"
@@ -39,25 +39,32 @@
               <a class="relative block md:before:absolute md:before:top-[68px] md:before:h-1 md:before:w-full md:before:duration-200 md:before:hover:bg-orange" href="#" data-menu-link>Contact</a>
             </li>
           </ul>
-          <button class="relative mr-4 pt-[5px] max-md:z-10 md:hidden" id="menu-button">
+          <button class="relative p-4 pb-[17px] max-md:z-10 md:hidden" aria-label="Toggle menu" id="menu-button">
             <img src="img/icon-menu.svg" alt="Open menu icon" width="16" height="15" id="menu-open-icon" />
             <img class="hidden" src="img/icon-close.svg" alt="Close menu icon" width="14" height="15" id="menu-close-icon" />
           </button>
         </nav>
-        <a class="pt-px max-md:mr-auto md:-order-1 md:mr-14 md:pb-0.5" href="#">
+        <a class="pb-4 pt-3 max-md:mr-auto md:-order-1 md:mr-14 md:pb-0.5 md:pt-px" href="#">
           <img src="img/logo.svg" alt="Sneakers logo" width="138" height="20" />
         </a>
-        <div class="flex items-end gap-x-[22px] md:items-center md:gap-x-[46px]">
-          <a class="group relative max-md:pb-px md:pt-0.5" href="#" id="cart-icon">
-            <span class="absolute -top-1 left-[9px] rounded-full bg-orange px-1.5 pt-px text-[10px]/[12px] font-bold text-white opacity-0 duration-200" id="icon-counter">0</span>
-            <svg class="fill-grayDark duration-200 md:group-hover:fill-black" width="22" height="20" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
-                fill-rule="nonzero" />
-            </svg>
+        <div class="flex items-end md:items-center md:gap-x-[46px]">
+          <a class="group max-md:p-3.5 max-md:pr-3 md:pt-0.5" href="#" id="cart-icon">
+            <div class="relative">
+              <span class="absolute -top-1.5 left-[9px] rounded-full bg-orange px-1.5 pt-px text-[10px]/[12px] font-bold text-white opacity-0 duration-200" id="icon-counter">0</span>
+              <svg class="fill-grayDark duration-200 md:group-hover:fill-black" width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+                  fill-rule="nonzero" />
+              </svg>
+            </div>
           </a>
-          <a class="relative w-6 before:absolute before:inset-0 before:rounded-full before:border-2 before:border-transparent before:duration-200 md:w-[50px] md:before:hover:border-orange" href="#">
-            <img src="img/image-avatar.png" alt="User avatar" width="50" height="50" />
+          <a
+            class="relative w-12 max-md:pb-[13px] max-md:pl-2.5 max-md:pr-3.5 max-md:pt-[11px] md:w-[50px] md:before:absolute md:before:inset-0 md:before:rounded-full md:before:border-2 md:before:border-transparent md:before:duration-200 md:before:hover:border-orange"
+            href="#">
+            <picture>
+              <source srcset="img/image-avatar-mobile.png" media="(max-width: 879px)" />
+              <img src="img/image-avatar.png" alt="User avatar" width="50" height="50" />
+            </picture>
           </a>
         </div>
       </div>
@@ -75,7 +82,7 @@
               <span id="preview-amount">3</span>
               <span class="pl-2 font-bold text-black" id="preview-final-price">$375.00</span>
             </p>
-            <button class="shrink-0 duration-200 md:hover:opacity-65" id="remove-item-button">
+            <button class="shrink-0 duration-200 md:hover:opacity-65" aria-label="Remove item" id="remove-item-button">
               <img src="img/icon-delete.svg" alt="Trash icon" width="14" height="16" />
             </button>
           </div>
@@ -91,58 +98,78 @@
         <div class="mx-auto max-w-[1110px] md:flex md:justify-between md:gap-x-[46px] md:pl-[22px] md:pr-6 min-[1024px]:pl-[46px] min-[1024px]:pr-[47px]">
           <div class="animation-gallery relative mb-[21px] md:max-w-[449px]">
             <div class="h-[300px] sm:h-[464px] md:mb-[30px] md:h-[445px] md:px-0.5">
-              <button class="overflow-x-hidden md:rounded-[15px]" id="open-gallery-button">
+              <div class="overflow-x-hidden md:cursor-pointer md:rounded-[15px]" tabindex="0" id="open-gallery-button">
                 <ul class="flex touch-none max-md:duration-200" data-image-row>
                   <li class="flex flex-[0_0_100%] items-center overflow-hidden max-sm:h-[300px] sm:max-md:h-[464px]">
-                    <img src="img/image-product-1.jpg" alt="Sneakers showcase image" />
+                    <picture>
+                      <source srcset="img/image-product-1.webp" type="image/webp" />
+                      <source srcset="img/image-product-1.jpg" type="image/jpeg" />
+                      <img src="img/image-product-1.jpg" alt="Pair of sneakers with one showing the sole" width="879" height="879" />
+                    </picture>
                   </li>
                   <li class="flex flex-[0_0_100%] items-start overflow-hidden max-sm:h-[300px] sm:max-md:h-[464px]">
-                    <img src="img/image-product-2.jpg" alt="Sneakers showcase image" />
+                    <picture>
+                      <source srcset="img/image-product-2.webp" type="image/webp" />
+                      <source srcset="img/image-product-2.jpg" type="image/jpeg" />
+                      <img src="img/image-product-2.jpg" alt="Pair of sneakers standing at different angles" width="879" height="879" />
+                    </picture>
                   </li>
                   <li class="flex flex-[0_0_100%] items-start overflow-hidden max-sm:h-[300px] sm:max-md:h-[464px]">
-                    <img src="img/image-product-3.jpg" alt="Sneakers showcase image" />
+                    <picture>
+                      <source srcset="img/image-product-3.webp" type="image/webp" />
+                      <source srcset="img/image-product-3.jpg" type="image/jpeg" />
+                      <img src="img/image-product-3.jpg" alt="Single sneaker shown at an angle" width="879" height="879" />
+                    </picture>
                   </li>
                   <li class="flex flex-[0_0_100%] items-start overflow-hidden max-sm:h-[300px] sm:max-md:h-[464px]">
-                    <img src="img/image-product-4.jpg" alt="Sneakers showcase image" />
+                    <picture>
+                      <source srcset="img/image-product-4.webp" type="image/webp" />
+                      <source srcset="img/image-product-4.jpg" type="image/jpeg" />
+                      <img src="img/image-product-4.jpg" alt="Single sneaker standing on a stack of stones" width="879" height="879" />
+                    </picture>
                   </li>
                 </ul>
-              </button>
+              </div>
             </div>
             <ul class="flex justify-between gap-x-[27px] max-md:hidden" data-thumbnail-row>
               <li>
                 <button
                   class="relative overflow-hidden rounded-[10px] border-2 border-transparent before:absolute before:inset-0 before:opacity-50 before:duration-200 md:before:hover:bg-white"
+                  aria-label="Show large version of this image"
                   data-thumbnail>
-                  <img src="img/image-product-1-thumbnail.jpg" alt="Sneakers showcase thumbnail" width="88" height="88" />
+                  <img src="img/image-product-1-thumbnail.jpg" alt="Pair of sneakers with one showing the sole" width="88" height="88" />
                 </button>
               </li>
               <li>
                 <button
                   class="relative overflow-hidden rounded-[10px] border-2 border-transparent before:absolute before:inset-0 before:opacity-50 before:duration-200 md:before:hover:bg-white"
+                  aria-label="Show large version of this image"
                   data-thumbnail>
-                  <img src="img/image-product-2-thumbnail.jpg" alt="Sneakers showcase thumbnail" width="88" height="88" />
+                  <img src="img/image-product-2-thumbnail.jpg" alt="Pair of sneakers standing at different angles" width="88" height="88" />
                 </button>
               </li>
               <li>
                 <button
                   class="relative overflow-hidden rounded-[10px] border-2 border-transparent before:absolute before:inset-0 before:opacity-50 before:duration-200 md:before:hover:bg-white"
+                  aria-label="Show large version of this image"
                   data-thumbnail>
-                  <img src="img/image-product-3-thumbnail.jpg" alt="Sneakers showcase thumbnail" width="88" height="88" />
+                  <img src="img/image-product-3-thumbnail.jpg" alt="Single sneaker shown at an angle" width="88" height="88" />
                 </button>
               </li>
               <li>
                 <button
                   class="relative overflow-hidden rounded-[10px] border-2 border-transparent before:absolute before:inset-0 before:opacity-50 before:duration-200 md:before:hover:bg-white"
+                  aria-label="Show large version of this image"
                   data-thumbnail>
-                  <img src="img/image-product-4-thumbnail.jpg" alt="Sneakers showcase thumbnail" width="88" height="88" />
+                  <img src="img/image-product-4-thumbnail.jpg" alt="Single sneaker standing on a stack of stones" width="88" height="88" />
                 </button>
               </li>
             </ul>
-            <button class="absolute left-4 top-2/4 h-10 w-10 -translate-y-2/4 rounded-full bg-white sm:h-14 sm:w-14 md:hidden" data-arrow="prev">
+            <button class="absolute left-4 top-2/4 h-10 w-10 -translate-y-2/4 rounded-full bg-white sm:h-14 sm:w-14 md:hidden" aria-label="Show previous image" data-arrow="prev">
               <img class="mx-auto sm:hidden" src="img/icon-previous-mobile.svg" alt="Left arrow icon" width="10" height="14" />
               <img class="mx-auto max-sm:hidden" src="img/icon-previous.svg" alt="Left arrow icon" width="13" height="20" />
             </button>
-            <button class="absolute right-4 top-2/4 h-10 w-10 -translate-y-2/4 rounded-full bg-white sm:h-14 sm:w-14 md:hidden" data-arrow="next">
+            <button class="absolute right-4 top-2/4 h-10 w-10 -translate-y-2/4 rounded-full bg-white sm:h-14 sm:w-14 md:hidden" aria-label="Show next image" data-arrow="next">
               <img class="mx-auto sm:hidden" src="img/icon-next-mobile.svg" alt="Right arrow icon" width="10" height="14" />
               <img class="mx-auto max-sm:hidden" src="img/icon-next.svg" alt="Right arrow icon" width="13" height="20" />
             </button>
@@ -162,14 +189,14 @@
             </div>
             <div class="flex flex-col gap-4 sm:flex-row">
               <div class="flex h-14 items-center justify-between overflow-hidden rounded-[10px] bg-grayLighter sm:max-md:flex-1 md:max-[960px]:min-w-[112px] min-[960px]:min-w-[157px]">
-                <button class="group h-full px-6 md:px-4" id="minus-button">
+                <button class="group h-full px-6 md:px-4" aria-label="Minus" id="minus-button">
                   <svg class="fill-orange duration-200 md:group-hover:fill-orangeHover" width="12" height="4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <defs><path d="M11.357 3.332A.641.641 0 0 0 12 2.69V.643A.641.641 0 0 0 11.357 0H.643A.641.641 0 0 0 0 .643v2.046c0 .357.287.643.643.643h10.714Z" id="a" /></defs>
                     <use fill-rule="nonzero" xlink:href="#a" />
                   </svg>
                 </button>
                 <span class="font-bold" id="button-counter">0</span>
-                <button class="group h-full px-6 md:px-4" id="plus-button">
+                <button class="group h-full px-6 md:px-4" aria-label="Plus" id="plus-button">
                   <svg class="fill-orange duration-200 md:group-hover:fill-orangeHover" width="12" height="12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <defs>
                       <path
@@ -198,7 +225,7 @@
     <div id="gallery-mode">
       <div class="bg-totalBlack fixed inset-0 opacity-75"></div>
       <div class="absolute left-1/2 top-[133px] w-[550px] -translate-x-1/2" id="gallery-container">
-        <button class="group absolute -top-[45px] right-0" id="close-gallery-button">
+        <button class="group absolute -top-[45px] right-0" aria-label="Close gallery" id="close-gallery-button">
           <svg class="fill-white duration-200 md:group-hover:fill-orange" viewBox="0 0 14 15" width="21" height="22" xmlns="http://www.w3.org/2000/svg">
             <path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill-rule="evenodd" />
           </svg>
@@ -207,16 +234,32 @@
           <div class="overflow-x-hidden md:rounded-[15px]">
             <ul class="flex" data-image-row>
               <li class="flex flex-[0_0_100%] items-center overflow-hidden">
-                <img src="img/image-product-1.jpg" alt="Sneakers showcase image" />
+                <picture>
+                  <source srcset="img/image-product-1.webp" type="image/webp" />
+                  <source srcset="img/image-product-1.jpg" type="image/jpeg" />
+                  <img src="img/image-product-1.jpg" alt="Pair of sneakers with one showing the sole" width="879" height="879" />
+                </picture>
               </li>
               <li class="flex flex-[0_0_100%] items-start overflow-hidden">
-                <img src="img/image-product-2.jpg" alt="Sneakers showcase image" />
+                <picture>
+                  <source srcset="img/image-product-2.webp" type="image/webp" />
+                  <source srcset="img/image-product-2.jpg" type="image/jpeg" />
+                  <img src="img/image-product-2.jpg" alt="Pair of sneakers standing at different angles" width="879" height="879" />
+                </picture>
               </li>
               <li class="flex flex-[0_0_100%] items-start overflow-hidden">
-                <img src="img/image-product-3.jpg" alt="Sneakers showcase image" />
+                <picture>
+                  <source srcset="img/image-product-3.webp" type="image/webp" />
+                  <source srcset="img/image-product-3.jpg" type="image/jpeg" />
+                  <img src="img/image-product-3.jpg" alt="Single sneaker shown at an angle" width="879" height="879" />
+                </picture>
               </li>
               <li class="flex flex-[0_0_100%] items-start overflow-hidden">
-                <img src="img/image-product-4.jpg" alt="Sneakers showcase image" />
+                <picture>
+                  <source srcset="img/image-product-4.webp" type="image/webp" />
+                  <source srcset="img/image-product-4.jpg" type="image/jpeg" />
+                  <img src="img/image-product-4.jpg" alt="Single sneaker standing on a stack of stones" width="879" height="879" />
+                </picture>
               </li>
             </ul>
           </div>
@@ -225,38 +268,42 @@
           <li>
             <button
               class="relative overflow-hidden rounded-[10px] border-2 border-transparent before:absolute before:inset-0 before:opacity-50 before:duration-200 md:before:hover:bg-white"
+              aria-label="Show large version of this image"
               data-thumbnail>
-              <img src="img/image-product-1-thumbnail.jpg" alt="Sneakers showcase thumbnail" width="88" height="88" />
+              <img src="img/image-product-1-thumbnail.jpg" alt="Pair of sneakers with one showing the sole" width="88" height="88" />
             </button>
           </li>
           <li>
             <button
               class="relative overflow-hidden rounded-[10px] border-2 border-transparent before:absolute before:inset-0 before:opacity-50 before:duration-200 md:before:hover:bg-white"
+              aria-label="Show large version of this image"
               data-thumbnail>
-              <img src="img/image-product-2-thumbnail.jpg" alt="Sneakers showcase thumbnail" width="88" height="88" />
+              <img src="img/image-product-2-thumbnail.jpg" alt="Pair of sneakers standing at different angles" width="88" height="88" />
             </button>
           </li>
           <li>
             <button
               class="relative overflow-hidden rounded-[10px] border-2 border-transparent before:absolute before:inset-0 before:opacity-50 before:duration-200 md:before:hover:bg-white"
+              aria-label="Show large version of this image"
               data-thumbnail>
-              <img src="img/image-product-3-thumbnail.jpg" alt="Sneakers showcase thumbnail" width="88" height="88" />
+              <img src="img/image-product-3-thumbnail.jpg" alt="Single sneaker shown at an angle" width="88" height="88" />
             </button>
           </li>
           <li>
             <button
               class="relative overflow-hidden rounded-[10px] border-2 border-transparent before:absolute before:inset-0 before:opacity-50 before:duration-200 md:before:hover:bg-white"
+              aria-label="Show large version of this image"
               data-thumbnail>
-              <img src="img/image-product-4-thumbnail.jpg" alt="Sneakers showcase thumbnail" width="88" height="88" />
+              <img src="img/image-product-4-thumbnail.jpg" alt="Single sneaker standing on a stack of stones" width="88" height="88" />
             </button>
           </li>
         </ul>
-        <button class="group absolute -left-7 top-[237px] h-14 w-14 rounded-full bg-white" data-arrow="prev">
+        <button class="group absolute -left-7 top-[237px] h-14 w-14 rounded-full bg-white" aria-label="Show previous image" data-arrow="prev">
           <svg class="mx-auto stroke-black duration-200 md:group-hover:stroke-orange" width="13" height="20" viewBox="0 0 13 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M11 2L3 10L11 18" stroke-width="3" />
           </svg>
         </button>
-        <button class="group absolute -right-7 top-[237px] h-14 w-14 rounded-full bg-white" data-arrow="next">
+        <button class="group absolute -right-7 top-[237px] h-14 w-14 rounded-full bg-white" aria-label="Show next image" data-arrow="next">
           <svg class="mx-auto stroke-black duration-200 md:group-hover:stroke-orange" width="13" height="20" viewBox="0 0 13 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M2 2L10 10L2 18" stroke-width="3" />
           </svg>

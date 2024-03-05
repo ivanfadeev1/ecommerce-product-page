@@ -176,7 +176,6 @@ function toggleGalleryMode(event) {
 
   if (!isOpen && isOpenGalleryButton) {
     galleryMode.classList.add("gallery--open");
-    document.body.classList.add("overflow-hidden");
     toggleFocusabilityBeneath("#gallery-mode");
   } else if (
     isOpen &&
@@ -185,7 +184,6 @@ function toggleGalleryMode(event) {
     !isThumbnailButton
   ) {
     galleryMode.classList.remove("gallery--open");
-    document.body.classList.remove("overflow-hidden");
     toggleFocusabilityBeneath("#gallery-mode", true);
   }
 }
@@ -193,7 +191,6 @@ function toggleGalleryMode(event) {
 function disableGalleryModeOnMobile() {
   if (document.documentElement.clientWidth < 880) {
     galleryMode.classList.remove("gallery--open");
-    document.body.classList.remove("overflow-hidden");
     toggleFocusabilityBeneath("#gallery-mode", true);
   }
 }
