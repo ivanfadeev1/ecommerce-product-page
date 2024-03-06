@@ -14,11 +14,11 @@ const previewFinalPrice = document.getElementById("preview-final-price");
 const removeItemButton = document.getElementById("remove-item-button");
 const productPrice = document.getElementById("product-price");
 const galleryMode = document.getElementById("gallery-mode");
-const totalImagesNumber =
-  document.querySelector("[data-image-row]").children.length;
+const openGalleryButton = document.getElementById("open-gallery-button");
 const thumbnailRows = document.querySelectorAll("[data-thumbnail-row]");
 const imageRows = document.querySelectorAll("[data-image-row]");
 const imageRow = imageRows[0];
+const totalImagesNumber = imageRow.children.length;
 
 let currentImageIndex = 0;
 let timerId;
@@ -160,9 +160,11 @@ function handleImageSwipe(event) {
 
 function toggleGalleryMode(event) {
   if (document.documentElement.clientWidth < 880) return;
+  if (event.type === "keydown" && event.key !== "Enter") return;
 
   const isOpen = galleryMode.classList.contains("gallery--open");
-  const isOpenGalleryButton = event.target.closest("#open-gallery-button");
+  const isOpenGalleryButton =
+    event.target.closest("#open-gallery-button") || event.key === "Enter";
   const isArrowButton = event.target.closest("[data-arrow]");
   const isThumbnailButton = event.target.closest("[data-thumbnail]");
   const galleryRect = document
@@ -267,6 +269,7 @@ function handlePreviewPointerenter() {
 
 function handlePreviewPointerleave() {
   if (document.documentElement.clientWidth < 880) return;
+
   timerId = setTimeout(() => {
     hideCartPreview();
   }, 300);
@@ -342,6 +345,7 @@ function init() {
   document.addEventListener("click", handleThumbnailClick);
   imageRow.addEventListener("pointerdown", handleImageSwipe);
   document.addEventListener("click", toggleGalleryMode);
+  openGalleryButton.addEventListener("keydown", toggleGalleryMode);
   window.addEventListener("resize", disableGalleryModeOnMobile);
   document.addEventListener("click", handleCounterButtonClick);
   addToCartButton.addEventListener("click", handleAddToCartButtonClick);

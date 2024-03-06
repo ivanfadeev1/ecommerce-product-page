@@ -2,15 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Modifiers */
+
 @layer utilities {
   .menu--open #menu-list {
     transform: translateX(0);
   }
 
   #header::before {
-    content: "";
     display: none;
     position: fixed;
+    content: "";
     inset: 0;
     background-color: black;
     opacity: 0;
@@ -19,8 +21,8 @@
   }
 
   #header.menu--open::before {
-    opacity: 0.75;
     display: block;
+    opacity: 0.75;
   }
 
   .thumbnail--active {
@@ -28,8 +30,8 @@
   }
 
   .thumbnail--active::after {
-    content: "";
     position: absolute;
+    content: "";
     inset: 0;
     background-color: white;
     opacity: 0.75;
@@ -48,27 +50,18 @@
   }
 }
 
-@keyframes gallery {
-  0% {
-    opacity: 0.9;
+/* Animation */
+
+@keyframes button {
+  50% {
+    transform: scale(1.02);
   }
-  100% {
-    opacity: 1;
-  }
-}
-.animation-gallery {
-  animation: gallery 0.6s ease-in;
-  animation-fill-mode: forwards;
 }
 
 @keyframes content-horizontal {
   0% {
     opacity: 0;
     transform: translateX(9%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
   }
 }
 
@@ -77,10 +70,6 @@
     opacity: 0;
     transform: translateY(7%);
   }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 @media (min-width: 880px) {
@@ -88,9 +77,13 @@
     animation: content-horizontal 0.7s ease-out;
     animation-fill-mode: forwards;
   }
+  #add-to-cart-button {
+    animation: button 0.5s ease-in;
+    animation-delay: 0.5s;
+  }
 }
 
-@media (max-width: 879px) {
+@media (min-width: 640px) and (max-width: 879px) {
   #content {
     animation: content-vertical 0.7s ease-out;
     animation-fill-mode: forwards;
