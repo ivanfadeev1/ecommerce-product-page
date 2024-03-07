@@ -6,6 +6,7 @@
 
 @layer utilities {
   .menu--open #menu-list {
+    opacity: 1;
     transform: translateX(0);
   }
 

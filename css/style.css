@@ -2219,12 +2219,12 @@ video {
   padding-bottom: 88px;
 }
 
-.pl-2 {
-  padding-left: 0.5rem;
-}
-
 .pl-6 {
   padding-left: 1.5rem;
+}
+
+.pr-2 {
+  padding-right: 0.5rem;
 }
 
 .pr-4 {
@@ -2811,6 +2811,7 @@ video {
 }
 
 .menu--open #menu-list {
+  opacity: 1;
   transform: translateX(0);
 }
 
@@ -3079,6 +3080,10 @@ video {
 
   .max-md\:font-bold {
     font-weight: 700;
+  }
+
+  .max-md\:opacity-0 {
+    opacity: 0;
   }
 
   .max-md\:duration-200 {

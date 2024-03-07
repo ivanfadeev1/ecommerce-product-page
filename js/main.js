@@ -42,6 +42,16 @@ function toggleMobileMenuState(event) {
   toggleMenuButtonState();
 }
 
+function disableMobileMenuOnDesktop() {
+  if (document.documentElement.clientWidth >= 880) {
+    if (header.classList.contains("menu--open")) {
+      header.classList.remove("menu--open");
+      document.body.classList.remove("overflow-hidden");
+      toggleFocusabilityBeneath("nav", true);
+    }
+  }
+}
+
 function toggleMenuButtonState() {
   const isOpen = header.classList.contains("menu--open");
   menuOpenIcon.classList.toggle("hidden", isOpen);
@@ -342,6 +352,7 @@ function init() {
   document.addEventListener("click", handleArrowButtonClick);
   document.addEventListener("keydown", handleArrowKeydown);
   document.addEventListener("click", toggleMobileMenuState);
+  window.addEventListener("resize", disableMobileMenuOnDesktop);
   document.addEventListener("click", handleThumbnailClick);
   imageRow.addEventListener("pointerdown", handleImageSwipe);
   document.addEventListener("click", toggleGalleryMode);
