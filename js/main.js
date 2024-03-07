@@ -50,6 +50,8 @@ function disableMobileMenuOnDesktop() {
       toggleFocusabilityBeneath("nav", true);
     }
   }
+
+  toggleMenuButtonState();
 }
 
 function toggleMenuButtonState() {
