@@ -18,7 +18,6 @@ module.exports = {
         sans: ["Kumbh Sans", "sans-serif"],
       },
       boxShadow: {
-        // DEFAULT: "0 15px 20px -5px rgba(13, 113, 130, 0.15)",
         button: "0 20px 50px -20px rgba(255, 126, 27)",
         cart: "0 20px 50px -20px rgba(29, 32, 38, 0.5)",
       },
